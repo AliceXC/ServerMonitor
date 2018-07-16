@@ -1,0 +1,60 @@
+<html>
+    <head>
+        <title>Server Monitor</title>
+        <link rel="stylesheet" href="./home.css">
+        <script src="./home.js"></script>
+    </head>
+
+    <body>
+        <div id="frame">
+            <h1>Server Monitor</h1>
+            <p>Please enter the url of the server that you wish to monitor and the monitor frequency. </p>
+            <div class = "form-group">
+                <!-- TODO USE html pattern & placeholder & required attributes to check against user input-->
+                <label for="url">Server url:</label>
+                <input type="text" class="form-control" id="url">
+                <br>
+                <label for="interval">Time interval:</label>
+                <input type="text" class="form-control" id="interval">
+                <label>ms</label>
+            </div> 
+    
+            <div class = "buttons">
+                <input type="button" value="start" id="start" onclick="start()">
+                <input type="button" value="stop" id="stop" onclick="stop()"> 
+                <input type="button" value="overview" id="overview" onclick="overview()">
+            </div>
+            
+            <div id = "status-list">
+                <table id = "status-table">
+                    <caption>Server Status</caption>
+                    <tr>
+                        <th>Time</th>
+                        <th>Status</th>
+                    </tr>
+                    <tr>
+                        <td id = "SS-time"></td>
+                        <td id = "SS-status"></td>
+                    </tr>
+                </table>
+            </div>
+    
+            <div id = "overview-period">
+                <table id = "overview-table">
+                    <caption>Overview</caption>
+                    <tr>
+                        <th>Last up</th>
+                        <th>Last down</th>
+                    </tr>
+                    <tr>
+                        <td id = "up-time"></td>
+                        <td id = "down-time"></td>
+                    </tr>
+                </table>
+            </div>
+
+        </div>
+    
+    </body>
+
+</html>
