@@ -20,17 +20,6 @@ http.createServer((request, response) => {
 function handlePath(request, response, path) {
     
     switch(path) {
-        case "/home":
-            serveFile("./home/home.html", response);
-            break;
-        case "/home.css":
-            serveFile("./home/home.css", response);
-            break;
-
-        case "/home.js":
-            serveFile("./home/home.js", response);
-            break;
-
         case "/favicon.ico":
             serveFile("./testicon.ico", response);
             break;
