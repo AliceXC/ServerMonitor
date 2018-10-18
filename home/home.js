@@ -78,6 +78,7 @@ function getUrl(){
 
 function start(){
     try{
+        // 2018-10-18 TODO: if the client change the url or interval while monitoring, then we need to start a new monitor and stop the old one
         // return if the input is not valid
         if(!validateInterval() || !validateUrl()){
             return;
